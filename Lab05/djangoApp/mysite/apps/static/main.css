@@ -13,6 +13,9 @@ body {
     padding: 20px;
 }
 
+.green-row a:any-link{
+    color: red;
+}
 .green-row a:visited {
     color: red;
 }
@@ -28,7 +31,9 @@ body {
     padding: 20px;
 }
 
-
+.grey-row a:any-link {
+    color: orange;
+}
 .grey-row a:visited {
     color: orange;
 }
@@ -45,6 +50,9 @@ body {
 .black-row {
     background-color: black;
     padding: 20px;
+}
+.black-row a:any-link {
+    color: white;
 }
 .black-row a:visited {
     color: white;
