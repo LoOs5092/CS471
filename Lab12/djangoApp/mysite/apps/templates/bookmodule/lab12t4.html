@@ -1,0 +1,21 @@
+<head>
+    <script>
+
+        function mouseOver(){
+            var div = document.getElementById('div1');
+            div.style.backgroundColor = "red"
+            div.style.fontSize = 15;
+            div.innerHTML = "LEAVE ME"
+        }
+        function mouseLeave(){
+            var div = document.getElementById('div1');
+            div.style.backgroundColor = "white"
+            div.style.fontSize = 12;
+            div.innerHTML = "HOVER ME";
+
+        }
+    </script>
+</head>
+<div onmouseover="mouseOver()" onmouseleave="mouseLeave()" id="div1">
+    HOVER ME
+</div>

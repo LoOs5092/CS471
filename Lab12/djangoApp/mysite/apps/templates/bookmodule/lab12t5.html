@@ -1,0 +1,19 @@
+<head>
+    <script>
+        let id = 0;
+        function addRow(passId){
+            var table = document.getElementById('table' + passId)
+            table.innerHTML += '<tr><td>NEW ROW</td></tr>'
+        }
+       function createTable(){
+        var div = document.getElementById('div1');
+        div.innerHTML += '<table id="table'+ id +'"">' +
+            '<tr><td>click the button to add row</td><td><button onclick="addRow('  + id + ')">click here </button></td></tr>'
+            '</table>';
+            id++;
+       }
+    </script>
+</head>
+<div id="div1">
+    <button onclick="createTable()">Create new table</button>
+</div>

@@ -1,0 +1,15 @@
+<head>
+    <script>
+        function addItem() {
+            var value = document.getElementById('input1').value;
+            var list = document.getElementById('list1');
+            list.innerHTML += '<li>' + value + '</li>'
+        }
+    </script>
+</head>
+<div id="div1">
+    <ul id="list1">
+        <li><input id="input1" /><button onclick="addItem()">Add New Item</button></li>
+    </ul>
+</div>
+

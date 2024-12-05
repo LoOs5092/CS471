@@ -1,0 +1,21 @@
+<head>
+    <script>
+
+        function divHide() {
+            var div = document.getElementById('div1');
+            var button = document.getElementById('but1')
+            if (div.style.display === 'none') {
+                div.style.display = 'block';
+                button.innerText = "HIDE IT";
+            } else {
+                div.style.display = 'none';
+                button.innerText = "SHOW IT";  
+            }
+        }
+    </script>
+</head>
+<div id="div1">
+    Its showin
+</div>
+<button id="but1" onclick="divHide()">HIDE IT</button>
+
