@@ -1,0 +1,9 @@
+{% extends "layouts/base.html" %}
+{% block title %} تسجيل دخول {% endblock %}
+{% block content %}
+<form method="post" action="">
+{% csrf_token %}
+{{form.as_p}}
+<button type="submit" name="login">تسجيل الدخول </button>
+</form>
+{% endblock content %}

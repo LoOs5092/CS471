@@ -3,12 +3,18 @@ from .models import Book, Address
 from django.db.models import Q
 from django.db.models import Count, Min, Max, Sum, Avg
 from .forms import BookForm
+from django.contrib import messages
 
 # Create your views here.
 def index(request):
  return render(request, "bookmodule/index.html")
 def list_books(request):
- return render(request, 'bookmodule/list_books.html')
+    if request.session.get('loggedIn'):
+        return render(request, 'bookmodule/list_books.html')
+    else:
+        messages.error(request, "يجب ان تسجل الدخول اولا حتى تصل لهذه الصفحة")
+        return redirect('/users/login')
+
 def viewbook(request, bookId):
  return render(request, 'bookmodule/one_book.html')
 def aboutus(request):
